@@ -2,11 +2,12 @@
 
 import logging
 
-from src.db import Position
+from db import Position, driver
 
 logging.basicConfig(level=logging.DEBUG)
-
 
 positions = Position.read_all()
 
 print(positions)
+
+driver().close()

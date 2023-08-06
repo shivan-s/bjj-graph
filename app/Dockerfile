@@ -20,4 +20,5 @@ RUN pip-compile -o requirements.txt requirements.in --resolver=backtracking && \
   pip-compile -o dev-requirements.txt dev-requirements.in --resolver=backtracking && \
   pip-sync requirements.txt dev-requirements.txt
 
+# ENTRYPOINT ["python", "-i", "src/main.py"]
 ENTRYPOINT ["sleep", "infinity"]
